@@ -10,6 +10,10 @@ from author_profiling.similarity_utils import cosine_similarity_sklearn
 
 THRESHOLD = 0.8  # Ngưỡng phân biệt cùng tác giả
 
+import nltk
+nltk.download('punkt', quiet=True)
+nltk.download('wordnet', quiet=True)
+
 def compare_authors(test_text):
     """
     Hàm chính để so sánh tác giả của hai văn bản.
