@@ -11,7 +11,7 @@ from author_profiling.similarity_utils import cosine_similarity_sklearn
 THRESHOLD = 0.8  # Ngưỡng phân biệt cùng tác giả
 
 import nltk
-nltk.download('punkt_tab')
+nltk.download('punkt_tab', quiet=True)
 nltk.download('punkt', quiet=True)
 nltk.download('wordnet', quiet=True)
 
