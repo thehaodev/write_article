@@ -1,6 +1,6 @@
 from nltk.util import ngrams
 from collections import Counter
-from preprocess import stem_lema
+from .preprocess import stem_lema
 
 def count_word(text, n=2):
     """
