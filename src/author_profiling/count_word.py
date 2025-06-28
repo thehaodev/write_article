@@ -2,7 +2,7 @@ from nltk.util import ngrams
 from collections import Counter
 from .preprocess import stem_lema
 
-def count_word(text, n=2):
+def count_word(text_tokens, n=2):
     """
     Hàm tính n-gram profile của văn bản sau tiền xử lý.
     
@@ -13,8 +13,7 @@ def count_word(text, n=2):
     Returns:
         Counter: Bộ đếm tần suất các n-gram
     """
-    tokens = stem_lema(text)  # Tiền xử lý văn bản
-    n_gram_list = list(ngrams(tokens, n))
+    n_gram_list = list(ngrams(text_tokens, n))
     profile = Counter(n_gram_list)
     
     return profile
